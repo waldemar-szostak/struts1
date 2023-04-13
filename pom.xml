@@ -20,11 +20,11 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-   <parent>
-      <groupId>org.apache.struts</groupId>
-      <artifactId>struts-master</artifactId>
-      <version>4</version>
-   </parent>
+    <parent>
+        <groupId>org.apache.struts</groupId>
+        <artifactId>struts-master</artifactId>
+        <version>4</version>
+    </parent>
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.apache.struts</groupId>
@@ -38,9 +38,9 @@
     <inceptionYear>2000</inceptionYear>
 
     <scm>
-       <connection>scm:svn:http://svn.apache.org/repos/asf/struts/struts1/trunk</connection>
-       <developerConnection>scm:svn:https://svn.apache.org/repos/asf/struts/struts1/trunk</developerConnection>
-       <url>http://svn.apache.org/viewvc/struts/struts1/trunk/</url>
+        <connection>scm:svn:http://svn.apache.org/repos/asf/struts/struts1/trunk</connection>
+        <developerConnection>scm:svn:https://svn.apache.org/repos/asf/struts/struts1/trunk</developerConnection>
+        <url>http://svn.apache.org/viewvc/struts/struts1/trunk/</url>
     </scm>
 
     <issueManagement>
@@ -137,7 +137,6 @@
         <module>scripting</module>
         <module>taglib</module>
         <module>tiles</module>
-        <module>tiles2</module>
     </modules>
 
     <licenses>
@@ -167,7 +166,7 @@
                     <artifactId>maven-taglib-plugin</artifactId>
                     <version>2.3.1</version>
                     <configuration>
-                      <parseHtml>true</parseHtml>
+                        <parseHtml>true</parseHtml>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -228,27 +227,27 @@
         </pluginManagement>
         <plugins>
             <plugin>
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-antrun-plugin</artifactId>
-               <inherited>false</inherited>
-               <executions>
-                  <execution>
-                     <id>copy-dtds</id>
-                     <phase>site</phase>
-                     <configuration>
-                        <tasks>
-                           <copy todir="${project.build.directory}/site/dtds"
-                                 failonerror="false">
-                              <fileset dir="${basedir}/core/src/main/resources/org/apache/struts/resources"/>
-                              <fileset dir="${basedir}/tiles/src/main/resources/org/apache/struts/resources"/>
-                           </copy>
-                        </tasks>
-                     </configuration>
-                     <goals>
-                        <goal>run</goal>
-                     </goals>
-                  </execution>
-               </executions>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <inherited>false</inherited>
+                <executions>
+                    <execution>
+                        <id>copy-dtds</id>
+                        <phase>site</phase>
+                        <configuration>
+                            <tasks>
+                                <copy todir="${project.build.directory}/site/dtds"
+                                      failonerror="false">
+                                    <fileset dir="${basedir}/core/src/main/resources/org/apache/struts/resources"/>
+                                    <fileset dir="${basedir}/tiles/src/main/resources/org/apache/struts/resources"/>
+                                </copy>
+                            </tasks>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.felix</groupId>
@@ -278,9 +277,9 @@
             </plugin>
 
         </plugins>
-        
+
         <defaultGoal>install</defaultGoal>
-        
+
     </build>
 
     <reporting>
@@ -294,14 +293,14 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>2.5</version>
                 <configuration>
-                  <aggregate>true</aggregate>
-                  <links>
-                    <link>http://commons.apache.org/beanutils/api/</link>
-                    <link>http://commons.apache.org/logging/apidocs/</link>
-                    <link>http://commons.apache.org/validator/apidocs/</link>
-                    <link>http://java.sun.com/j2se/1.4.2/docs/api/</link>
-                    <link>http://java.sun.com/j2ee/1.4/docs/api/</link>
-                  </links>
+                    <aggregate>true</aggregate>
+                    <links>
+                        <link>http://commons.apache.org/beanutils/api/</link>
+                        <link>http://commons.apache.org/logging/apidocs/</link>
+                        <link>http://commons.apache.org/validator/apidocs/</link>
+                        <link>http://java.sun.com/j2se/1.4.2/docs/api/</link>
+                        <link>http://java.sun.com/j2ee/1.4/docs/api/</link>
+                    </links>
                 </configuration>
             </plugin>
             <plugin>
@@ -314,7 +313,7 @@
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                  <configLocation>http://svn.apache.org/repos/asf/struts/maven/trunk/build/struts_checks.xml</configLocation>
+                    <configLocation>http://svn.apache.org/repos/asf/struts/maven/trunk/build/struts_checks.xml</configLocation>
                 </configuration>
             </plugin>
             <plugin>
@@ -373,9 +372,9 @@
                 <version>1.8.0</version>
             </dependency>
             <dependency>
-               <groupId>commons-codec</groupId>
-               <artifactId>commons-codec</artifactId>
-               <version>1.2</version>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.2</version>
             </dependency>
             <dependency>
                 <groupId>commons-chain</groupId>
@@ -403,9 +402,9 @@
                 <version>1.8</version>
             </dependency>
             <dependency>
-               <groupId>commons-el</groupId>
-               <artifactId>commons-el</artifactId>
-               <version>1.0</version>
+                <groupId>commons-el</groupId>
+                <artifactId>commons-el</artifactId>
+                <version>1.0</version>
             </dependency>
             <dependency>
                 <groupId>commons-fileupload</groupId>
@@ -430,10 +429,10 @@
                 </exclusions>
             </dependency>
             <dependency>
-              <groupId>javax.servlet</groupId>
-              <artifactId>jsp-api</artifactId>
-              <version>2.0</version>
-              <scope>provided</scope>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jsp-api</artifactId>
+                <version>2.0</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>javax.servlet</groupId>
@@ -453,19 +452,19 @@
                 <optional>true</optional>
             </dependency>
             <dependency>
-               <groupId>myfaces</groupId>
-               <artifactId>myfaces-extensions</artifactId>
-               <version>${myfaces.version}</version>
+                <groupId>myfaces</groupId>
+                <artifactId>myfaces-extensions</artifactId>
+                <version>${myfaces.version}</version>
             </dependency>
             <dependency>
-               <groupId>myfaces</groupId>
-               <artifactId>myfaces-impl</artifactId>
-               <version>${myfaces.version}</version>
+                <groupId>myfaces</groupId>
+                <artifactId>myfaces-impl</artifactId>
+                <version>${myfaces.version}</version>
             </dependency>
             <dependency>
-               <groupId>myfaces</groupId>
-               <artifactId>myfaces-jsf-api</artifactId>
-               <version>${myfaces.version}</version>
+                <groupId>myfaces</groupId>
+                <artifactId>myfaces-jsf-api</artifactId>
+                <version>${myfaces.version}</version>
             </dependency>
             <dependency>
                 <groupId>oro</groupId>
@@ -473,9 +472,9 @@
                 <version>2.0.8</version>
             </dependency>
             <dependency>
-              <groupId>taglibs</groupId>
-              <artifactId>standard</artifactId>
-              <version>1.0.6</version>
+                <groupId>taglibs</groupId>
+                <artifactId>standard</artifactId>
+                <version>1.0.6</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
