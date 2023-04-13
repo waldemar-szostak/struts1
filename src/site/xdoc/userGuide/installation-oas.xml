@@ -95,7 +95,7 @@
                         to access the example
                         application, with the following message:
                         <br/>
-                        <code>javax.servlet.jsp.JspException: Missing
+                        <code>jakarta.servlet.jsp.JspException: Missing
                             resources
                             attributeorg.apache.struts.action.MESSAGE</code>
                         <br/>

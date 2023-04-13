@@ -23,7 +23,7 @@ package org.apache.strutsel.taglib.tiles;
 import org.apache.struts.tiles.taglib.InitDefinitionsTag;
 import org.apache.strutsel.taglib.utils.EvalHelper;
 
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * Init definitions factory. <p> This class is a subclass of the class

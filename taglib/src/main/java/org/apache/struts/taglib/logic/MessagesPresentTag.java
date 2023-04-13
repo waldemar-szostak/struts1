@@ -24,7 +24,7 @@ import org.apache.struts.Globals;
 import org.apache.struts.action.ActionMessages;
 import org.apache.struts.taglib.TagUtils;
 
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspException;
 
 import java.util.Iterator;
 

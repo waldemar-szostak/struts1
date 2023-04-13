@@ -23,7 +23,7 @@ package org.apache.strutsel.taglib.tiles;
 import org.apache.struts.tiles.taglib.AddTag;
 import org.apache.strutsel.taglib.utils.EvalHelper;
 
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * Adds an element to the surrounding list tag.  Same syntax as

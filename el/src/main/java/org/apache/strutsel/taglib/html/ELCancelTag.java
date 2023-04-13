@@ -23,7 +23,7 @@ package org.apache.strutsel.taglib.html;
 import org.apache.struts.taglib.html.CancelTag;
 import org.apache.strutsel.taglib.utils.EvalHelper;
 
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * Tag for input fields of type "cancel". <p> This class is a subclass of the

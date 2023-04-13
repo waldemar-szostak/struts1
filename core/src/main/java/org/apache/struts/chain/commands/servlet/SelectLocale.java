@@ -27,7 +27,7 @@ import org.apache.struts.chain.commands.AbstractSelectLocale;
 import org.apache.struts.chain.contexts.ActionContext;
 import org.apache.struts.chain.contexts.ServletActionContext;
 
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.http.HttpSession;
 
 import java.util.Locale;
 

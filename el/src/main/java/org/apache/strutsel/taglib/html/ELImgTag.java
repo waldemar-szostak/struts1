@@ -23,7 +23,7 @@ package org.apache.strutsel.taglib.html;
 import org.apache.struts.taglib.html.ImgTag;
 import org.apache.strutsel.taglib.utils.EvalHelper;
 
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * <p>Generate an IMG tag to the specified image URI. </p>

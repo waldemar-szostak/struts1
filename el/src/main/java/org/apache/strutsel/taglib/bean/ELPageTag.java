@@ -23,7 +23,7 @@ package org.apache.strutsel.taglib.bean;
 import org.apache.struts.taglib.bean.PageTag;
 import org.apache.strutsel.taglib.utils.EvalHelper;
 
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * Define a scripting variable that exposes the requested page context item as

@@ -34,7 +34,7 @@ import org.apache.commons.beanutils.BeanUtils;
 import junit.framework.Test;
 import junit.framework.TestSuite;
 
-import javax.servlet.ServletException;
+import jakarta.servlet.ServletException;
 import java.util.Locale;
 import java.util.Map;
 import java.util.HashMap;

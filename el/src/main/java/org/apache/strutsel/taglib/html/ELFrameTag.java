@@ -23,7 +23,7 @@ package org.apache.strutsel.taglib.html;
 import org.apache.struts.taglib.html.FrameTag;
 import org.apache.strutsel.taglib.utils.EvalHelper;
 
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * Generate an HTML <code>&lt;frame&gt;</code> tag with similar capabilities

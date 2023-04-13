@@ -1160,7 +1160,7 @@
                     <li>REQUEST_PROCESSOR_KEY</li>
                     <li>execute</li>
                     <li>
-                        getResources(javax.servlet.http.HttpServletRequest)</li>
+                        getResources(jakarta.servlet.http.HttpServletRequest)</li>
                     <li>saveMessages</li>
                 </ul>
                 <p>

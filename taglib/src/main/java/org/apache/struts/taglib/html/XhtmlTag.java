@@ -25,9 +25,9 @@ import org.apache.commons.logging.LogFactory;
 import org.apache.struts.Globals;
 import org.apache.struts.taglib.TagUtils;
 
-import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.PageContext;
-import javax.servlet.jsp.tagext.TagSupport;
+import jakarta.servlet.jsp.JspException;
+import jakarta.servlet.jsp.PageContext;
+import jakarta.servlet.jsp.tagext.TagSupport;
 
 /**
  * This tag tells all other html taglib tags to render themselves in xhtml. 
@@ -54,7 +54,7 @@ public class XhtmlTag extends TagSupport {
     }
 
     /**
-     * @see javax.servlet.jsp.tagext.Tag#doEndTag()
+     * @see jakarta.servlet.jsp.tagext.Tag#doEndTag()
      */
     public int doEndTag() throws JspException {
         int inScope = PageContext.PAGE_SCOPE;

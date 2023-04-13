@@ -23,8 +23,8 @@ package org.apache.struts.tiles;
 
 import java.util.Map;
 import java.util.Locale;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletRequest;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletRequest;
 import org.apache.struts.tiles.xmlDefinition.I18nFactorySet;
 /**
  * <p>Test I18nFactorySet.</p>

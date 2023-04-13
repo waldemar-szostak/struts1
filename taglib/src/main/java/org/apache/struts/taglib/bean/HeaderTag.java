@@ -23,9 +23,9 @@ package org.apache.struts.taglib.bean;
 import org.apache.struts.taglib.TagUtils;
 import org.apache.struts.util.MessageResources;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.tagext.TagSupport;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.jsp.JspException;
+import jakarta.servlet.jsp.tagext.TagSupport;
 
 import java.util.ArrayList;
 import java.util.Enumeration;

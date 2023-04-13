@@ -73,7 +73,7 @@
                         from the archive so this file will not be found,
                         resulting in an error the
                         first time it is needed- something similar to:
-                        javax.servlet.ServletException:
+                        jakarta.servlet.ServletException:
                         runtime failure in custom tag 'message'. Steps 6 &amp;
                         7 will need to be performed
                         for this application, and any other that relies on

@@ -30,7 +30,7 @@ import org.apache.struts.util.RequestUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import javax.servlet.ServletException;
+import jakarta.servlet.ServletException;
 
 /**
  * <p>Convenient implementation of {@link PlugIn} that performs as many

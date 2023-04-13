@@ -23,7 +23,7 @@ package org.apache.strutsel.taglib.logic;
 import org.apache.struts.taglib.logic.RedirectTag;
 import org.apache.strutsel.taglib.utils.EvalHelper;
 
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * Generate a URL-encoded redirect to the specified URI. <p> This class is a

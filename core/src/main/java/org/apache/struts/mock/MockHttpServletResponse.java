@@ -20,13 +20,14 @@
  */
 package org.apache.struts.mock;
 
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import java.util.Collection;
 import java.util.Locale;
 
 /**
@@ -114,6 +115,26 @@ public class MockHttpServletResponse implements HttpServletResponse {
         throw new UnsupportedOperationException();
     }
 
+    @Override
+    public int getStatus() {
+        return 0;
+    }
+
+    @Override
+    public String getHeader(String s) {
+        return null;
+    }
+
+    @Override
+    public Collection<String> getHeaders(String s) {
+        return null;
+    }
+
+    @Override
+    public Collection<String> getHeaderNames() {
+        return null;
+    }
+
     public void setStatus(int status, String message) {
         throw new UnsupportedOperationException();
     }
@@ -131,6 +152,11 @@ public class MockHttpServletResponse implements HttpServletResponse {
         throw new UnsupportedOperationException();
     }
 
+    @Override
+    public String getContentType() {
+        return null;
+    }
+
     public Locale getLocale() {
         throw new UnsupportedOperationException();
     }
@@ -143,6 +169,11 @@ public class MockHttpServletResponse implements HttpServletResponse {
     public PrintWriter getWriter()
         throws IOException {
         throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public void setCharacterEncoding(String s) {
+
     }
 
     public boolean isCommitted() {
@@ -163,6 +194,11 @@ public class MockHttpServletResponse implements HttpServletResponse {
 
     public void setContentLength(int length) {
         throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public void setContentLengthLong(long l) {
+
     }
 
     public void setContentType(String type) {

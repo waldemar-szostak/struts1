@@ -20,16 +20,20 @@
  */
 package org.apache.struts.mock;
 
-import javax.servlet.Servlet;
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-import javax.servlet.jsp.JspWriter;
-import javax.servlet.jsp.PageContext;
-import javax.servlet.jsp.tagext.BodyContent;
+import jakarta.el.ELContext;
+import jakarta.servlet.Servlet;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
+import jakarta.servlet.jsp.JspWriter;
+import jakarta.servlet.jsp.PageContext;
+import jakarta.servlet.jsp.el.ExpressionEvaluator;
+import jakarta.servlet.jsp.el.VariableResolver;
+import jakarta.servlet.jsp.tagext.BodyContent;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -497,6 +501,21 @@ public class MockPageContext extends PageContext {
         return jspWriter;
     }
 
+    @Override
+    public ExpressionEvaluator getExpressionEvaluator() {
+        return null;
+    }
+
+    @Override
+    public VariableResolver getVariableResolver() {
+        return null;
+    }
+
+    @Override
+    public ELContext getELContext() {
+        return null;
+    }
+
     public Object getPage() {
         throw new UnsupportedOperationException();
     }
@@ -531,6 +550,11 @@ public class MockPageContext extends PageContext {
 
     public void include(String path) {
         throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public void include(String s, boolean b) throws ServletException, IOException {
+
     }
 
     public void initialize(Servlet servlet, ServletRequest request,

@@ -23,7 +23,7 @@ package org.apache.strutsel.taglib.html;
 import org.apache.struts.taglib.html.FormTag;
 import org.apache.strutsel.taglib.utils.EvalHelper;
 
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * Custom tag that represents an input form, associated with a bean whose

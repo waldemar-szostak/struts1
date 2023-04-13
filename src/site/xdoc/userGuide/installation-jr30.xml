@@ -57,7 +57,7 @@
                 <pre>
                     /struts-example/index.jsp:
 
-                    javax.servlet.ServletException: Compilation error
+                    jakarta.servlet.ServletException: Compilation error
                     occurred:
 
                     allaire.jrun.scripting.DefaultCFE:

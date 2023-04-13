@@ -23,7 +23,7 @@ package org.apache.strutsel.taglib.bean;
 import org.apache.struts.taglib.bean.SizeTag;
 import org.apache.strutsel.taglib.utils.EvalHelper;
 
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * Define a scripting variable that will contain the number of elements found

@@ -27,8 +27,8 @@ import org.apache.commons.beanutils.DynaProperty;
 import org.apache.struts.config.FormBeanConfig;
 import org.apache.struts.config.FormPropertyConfig;
 
-import javax.servlet.ServletRequest;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 import java.lang.reflect.Array;
 

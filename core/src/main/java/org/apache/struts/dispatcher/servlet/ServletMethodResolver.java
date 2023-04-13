@@ -29,8 +29,8 @@ import org.apache.struts.dispatcher.AbstractMethodResolver;
 
 import java.lang.reflect.Method;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 /**
  * This class helps resolve methods with servlet-based signatures. The following
@@ -53,7 +53,7 @@ public class ServletMethodResolver extends AbstractMethodResolver {
      * These are the same for all calls, so calculate them only once.
      * 
      * @see org.apache.struts.action.Action#execute(ActionMapping, ActionForm,
-     *      javax.servlet.ServletRequest, javax.servlet.ServletResponse)
+     *      jakarta.servlet.ServletRequest, jakarta.servlet.ServletResponse)
      */
     private static final Class[] CLASSIC_EXECUTE_SIGNATURE = { ActionMapping.class, ActionForm.class,
             HttpServletRequest.class, HttpServletResponse.class };
@@ -100,7 +100,7 @@ public class ServletMethodResolver extends AbstractMethodResolver {
      * @throws NoSuchMethodException if the method does not exist
      * @see #buildClassicArguments(ServletActionContext)
      * @see org.apache.struts.action.Action#execute(ActionMapping, ActionForm,
-     *      javax.servlet.ServletRequest, javax.servlet.ServletResponse)
+     *      jakarta.servlet.ServletRequest, jakarta.servlet.ServletResponse)
      */
     protected final Method resolveClassicMethod(ActionContext context, String methodName) throws NoSuchMethodException {
         Class actionClass = context.getAction().getClass();

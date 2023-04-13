@@ -23,7 +23,7 @@ package org.apache.strutsel.taglib.bean;
 import org.apache.struts.taglib.bean.ResourceTag;
 import org.apache.strutsel.taglib.utils.EvalHelper;
 
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * Define a scripting variable based on the contents of the specified web

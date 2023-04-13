@@ -20,7 +20,10 @@
  */
 package org.apache.struts.upload;
 
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 import org.apache.commons.fileupload.DiskFileUpload;
+import org.apache.commons.fileupload.RequestContext;
 import org.apache.commons.fileupload.disk.DiskFileItem;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
@@ -31,10 +34,9 @@ import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionServlet;
 import org.apache.struts.config.ModuleConfig;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.ServletInputStream;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletInputStream;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -184,7 +186,7 @@ public class CommonsMultipartRequestHandler implements MultipartRequestHandler {
         List items = null;
 
         try {
-            items = upload.parseRequest(request);
+            items = parseRequest(upload, request);
         } catch (DiskFileUpload.SizeLimitExceededException e) {
             // Special handling for uploads that are too big.
             request.setAttribute(MultipartRequestHandler.ATTRIBUTE_MAX_LENGTH_EXCEEDED,
@@ -219,6 +221,11 @@ public class CommonsMultipartRequestHandler implements MultipartRequestHandler {
      */
     public Hashtable getTextElements() {
         return this.elementsText;
+    }
+
+    private List parseRequest(DiskFileUpload upload, ServletRequest request) throws FileUploadException {
+        RequestContext requestContext = new CustomRequestContext(request);
+        return upload.parseRequest(requestContext);
     }
 
     /**
@@ -363,7 +370,7 @@ public class CommonsMultipartRequestHandler implements MultipartRequestHandler {
      * explicitly defined either using the <code>tempDir</code> servlet init
      * param, or the <code>tempDir</code> attribute of the &lt;controller&gt;
      * element in the Struts config file.</li> <li>The container-specified
-     * temp dir, obtained from the <code>javax.servlet.context.tempdir</code>
+     * temp dir, obtained from the <code>jakarta.servlet.context.tempdir</code>
      * servlet context attribute.</li> <li>The temp dir specified by the
      * <code>java.io.tmpdir</code> system property.</li> (/ol> </p>
      *
@@ -380,7 +387,7 @@ public class CommonsMultipartRequestHandler implements MultipartRequestHandler {
             if (servlet != null) {
                 ServletContext context = servlet.getServletContext();
                 File tempDirFile =
-                    (File) context.getAttribute("javax.servlet.context.tempdir");
+                    (File) context.getAttribute("jakarta.servlet.context.tempdir");
 
                 tempDir = tempDirFile.getAbsolutePath();
             }

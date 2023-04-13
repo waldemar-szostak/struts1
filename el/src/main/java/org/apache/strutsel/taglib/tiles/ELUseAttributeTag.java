@@ -23,7 +23,7 @@ package org.apache.strutsel.taglib.tiles;
 import org.apache.struts.tiles.taglib.UseAttributeTag;
 import org.apache.strutsel.taglib.utils.EvalHelper;
 
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * Custom tag exposing a component attribute to page. <p> This class is a

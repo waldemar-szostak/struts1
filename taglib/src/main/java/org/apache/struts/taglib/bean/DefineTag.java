@@ -25,9 +25,9 @@ import org.apache.commons.logging.LogFactory;
 import org.apache.struts.taglib.TagUtils;
 import org.apache.struts.util.MessageResources;
 
-import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.PageContext;
-import javax.servlet.jsp.tagext.BodyTagSupport;
+import jakarta.servlet.jsp.JspException;
+import jakarta.servlet.jsp.PageContext;
+import jakarta.servlet.jsp.tagext.BodyTagSupport;
 
 /**
  * Define a scripting variable based on the value(s) of the specified bean

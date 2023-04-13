@@ -23,7 +23,7 @@ package org.apache.strutsel.taglib.tiles;
 import org.apache.struts.tiles.taglib.PutTag;
 import org.apache.strutsel.taglib.utils.EvalHelper;
 
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * <p>Put an attribute in enclosing attribute container tag. Enclosing

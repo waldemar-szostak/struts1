@@ -30,9 +30,9 @@ import org.apache.struts.taglib.logic.IterateTag;
 import org.apache.struts.util.MessageResources;
 import org.apache.struts.util.RequestUtils;
 
-import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.PageContext;
-import javax.servlet.jsp.tagext.BodyTagSupport;
+import jakarta.servlet.jsp.JspException;
+import jakarta.servlet.jsp.PageContext;
+import jakarta.servlet.jsp.tagext.BodyTagSupport;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -856,14 +856,14 @@ public abstract class BaseHandlerTag extends BodyTagSupport {
             try {
                 loopTagClass =
                     RequestUtils.applicationClass(
-                        "javax.servlet.jsp.jstl.core.LoopTag");
+                        "jakarta.servlet.jsp.jstl.core.LoopTag");
 
                 loopTagGetStatus =
                     loopTagClass.getDeclaredMethod("getLoopStatus", null);
 
                 loopTagStatusClass =
                     RequestUtils.applicationClass(
-                        "javax.servlet.jsp.jstl.core.LoopTagStatus");
+                        "jakarta.servlet.jsp.jstl.core.LoopTagStatus");
 
                 loopTagStatusGetIndex =
                     loopTagStatusClass.getDeclaredMethod("getIndex", null);

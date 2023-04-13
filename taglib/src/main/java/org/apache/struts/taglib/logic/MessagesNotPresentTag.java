@@ -20,7 +20,7 @@
  */
 package org.apache.struts.taglib.logic;
 
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * Evalute the nested body content of this tag if the specified value is not

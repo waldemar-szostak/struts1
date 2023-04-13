@@ -23,7 +23,7 @@ package org.apache.strutsel.taglib.tiles;
 import org.apache.struts.tiles.taglib.PutListTag;
 import org.apache.strutsel.taglib.utils.EvalHelper;
 
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * PutList tag implementation. <p> This class is a subclass of the class

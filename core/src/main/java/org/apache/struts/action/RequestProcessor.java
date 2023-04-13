@@ -31,12 +31,12 @@ import org.apache.struts.upload.MultipartRequestWrapper;
 import org.apache.struts.util.MessageResources;
 import org.apache.struts.util.RequestUtils;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
@@ -62,7 +62,7 @@ public class RequestProcessor {
      * processing during a <code>RequestDispatcher.include</code> call.</p>
      */
     public static final String INCLUDE_PATH_INFO =
-        "javax.servlet.include.path_info";
+        "jakarta.servlet.include.path_info";
 
     /**
      * <p>The request attribute under which the servlet path information is
@@ -70,7 +70,7 @@ public class RequestProcessor {
      * call.</p>
      */
     public static final String INCLUDE_SERVLET_PATH =
-        "javax.servlet.include.servlet_path";
+        "jakarta.servlet.include.servlet_path";
 
     /**
      * <p>Commons Logging instance.</p>

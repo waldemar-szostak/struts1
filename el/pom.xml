@@ -79,12 +79,12 @@
          <optional>true</optional>
       </dependency>
       <dependency>
-         <groupId>javax.servlet</groupId>
-         <artifactId>jstl</artifactId>
+          <groupId>jakarta.servlet.jsp.jstl</groupId>
+          <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
       </dependency>
       <dependency>
-         <groupId>javax.servlet</groupId>
-         <artifactId>servlet-api</artifactId>
+          <groupId>jakarta.servlet</groupId>
+          <artifactId>jakarta.servlet-api</artifactId>
       </dependency>
       <dependency>
          <groupId>taglibs</groupId>

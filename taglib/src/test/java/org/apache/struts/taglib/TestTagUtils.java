@@ -39,8 +39,8 @@ import org.apache.struts.mock.MockServletConfig;
 import org.apache.struts.mock.MockServletContext;
 import org.apache.struts.taglib.html.Constants;
 
-import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.PageContext;
+import jakarta.servlet.jsp.JspException;
+import jakarta.servlet.jsp.PageContext;
 
 import java.net.MalformedURLException;
 

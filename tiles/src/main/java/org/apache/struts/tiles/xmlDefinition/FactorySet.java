@@ -25,8 +25,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletRequest;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletRequest;
 
 import org.apache.struts.tiles.ComponentDefinition;
 import org.apache.struts.tiles.ComponentDefinitionsFactory;

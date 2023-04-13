@@ -20,19 +20,28 @@
  */
 package org.apache.struts.mock;
 
+import jakarta.servlet.Filter;
+import jakarta.servlet.FilterRegistration;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRegistration;
+import jakarta.servlet.SessionCookieConfig;
+import jakarta.servlet.SessionTrackingMode;
+import jakarta.servlet.descriptor.JspConfigDescriptor;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.Servlet;
-import javax.servlet.ServletContext;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.Servlet;
+import jakarta.servlet.ServletContext;
 
 import java.io.InputStream;
 
 import java.net.URL;
 
 import java.util.Enumeration;
+import java.util.EventListener;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -87,6 +96,11 @@ public class MockServletContext implements ServletContext {
         return (new MockEnumeration(attributes.keySet().iterator()));
     }
 
+    @Override
+    public String getContextPath() {
+        return null;
+    }
+
     public ServletContext getContext(String uripath) {
         throw new UnsupportedOperationException();
     }
@@ -99,6 +113,11 @@ public class MockServletContext implements ServletContext {
         return (new MockEnumeration(parameters.keySet().iterator()));
     }
 
+    @Override
+    public boolean setInitParameter(String s, String s1) {
+        return false;
+    }
+
     public int getMajorVersion() {
         return (2);
     }
@@ -109,6 +128,16 @@ public class MockServletContext implements ServletContext {
 
     public int getMinorVersion() {
         return (3);
+    }
+
+    @Override
+    public int getEffectiveMajorVersion() {
+        return 0;
+    }
+
+    @Override
+    public int getEffectiveMinorVersion() {
+        return 0;
     }
 
     public RequestDispatcher getNamedDispatcher(String name) {
@@ -149,6 +178,161 @@ public class MockServletContext implements ServletContext {
 
     public String getServletContextName() {
         return (getServerInfo());
+    }
+
+    @Override
+    public ServletRegistration.Dynamic addServlet(String s, String s1) {
+        return null;
+    }
+
+    @Override
+    public ServletRegistration.Dynamic addServlet(String s, Servlet servlet) {
+        return null;
+    }
+
+    @Override
+    public ServletRegistration.Dynamic addServlet(String s, Class<? extends Servlet> aClass) {
+        return null;
+    }
+
+    @Override
+    public ServletRegistration.Dynamic addJspFile(String s, String s1) {
+        return null;
+    }
+
+    @Override
+    public <T extends Servlet> T createServlet(Class<T> aClass) throws ServletException {
+        return null;
+    }
+
+    @Override
+    public ServletRegistration getServletRegistration(String s) {
+        return null;
+    }
+
+    @Override
+    public Map<String, ? extends ServletRegistration> getServletRegistrations() {
+        return null;
+    }
+
+    @Override
+    public FilterRegistration.Dynamic addFilter(String s, String s1) {
+        return null;
+    }
+
+    @Override
+    public FilterRegistration.Dynamic addFilter(String s, Filter filter) {
+        return null;
+    }
+
+    @Override
+    public FilterRegistration.Dynamic addFilter(String s, Class<? extends Filter> aClass) {
+        return null;
+    }
+
+    @Override
+    public <T extends Filter> T createFilter(Class<T> aClass) throws ServletException {
+        return null;
+    }
+
+    @Override
+    public FilterRegistration getFilterRegistration(String s) {
+        return null;
+    }
+
+    @Override
+    public Map<String, ? extends FilterRegistration> getFilterRegistrations() {
+        return null;
+    }
+
+    @Override
+    public SessionCookieConfig getSessionCookieConfig() {
+        return null;
+    }
+
+    @Override
+    public void setSessionTrackingModes(Set<SessionTrackingMode> set) {
+
+    }
+
+    @Override
+    public Set<SessionTrackingMode> getDefaultSessionTrackingModes() {
+        return null;
+    }
+
+    @Override
+    public Set<SessionTrackingMode> getEffectiveSessionTrackingModes() {
+        return null;
+    }
+
+    @Override
+    public void addListener(String s) {
+
+    }
+
+    @Override
+    public <T extends EventListener> void addListener(T t) {
+
+    }
+
+    @Override
+    public void addListener(Class<? extends EventListener> aClass) {
+
+    }
+
+    @Override
+    public <T extends EventListener> T createListener(Class<T> aClass) throws ServletException {
+        return null;
+    }
+
+    @Override
+    public JspConfigDescriptor getJspConfigDescriptor() {
+        return null;
+    }
+
+    @Override
+    public ClassLoader getClassLoader() {
+        return null;
+    }
+
+    @Override
+    public void declareRoles(String... strings) {
+
+    }
+
+    @Override
+    public String getVirtualServerName() {
+        return null;
+    }
+
+    @Override
+    public int getSessionTimeout() {
+        return 0;
+    }
+
+    @Override
+    public void setSessionTimeout(int i) {
+
+    }
+
+    @Override
+    public String getRequestCharacterEncoding() {
+        return null;
+    }
+
+    @Override
+    public void setRequestCharacterEncoding(String s) {
+
+    }
+
+    @Override
+    public String getResponseCharacterEncoding() {
+        return null;
+    }
+
+    @Override
+    public void setResponseCharacterEncoding(String s) {
+
     }
 
     public Enumeration getServletNames() {

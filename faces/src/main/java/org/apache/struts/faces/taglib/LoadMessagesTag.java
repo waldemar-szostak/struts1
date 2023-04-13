@@ -26,8 +26,8 @@ import java.util.Locale;
 
 import javax.faces.context.FacesContext;
 
-import javax.servlet.jsp.PageContext;
-import javax.servlet.jsp.tagext.TagSupport;
+import jakarta.servlet.jsp.PageContext;
+import jakarta.servlet.jsp.tagext.TagSupport;
 
 import org.apache.struts.Globals;
 import org.apache.struts.faces.util.MessagesMap;

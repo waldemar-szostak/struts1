@@ -28,8 +28,8 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-import javax.servlet.ServletRequest;
-import javax.servlet.jsp.PageContext;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.jsp.PageContext;
 
 import org.apache.struts.tiles.taglib.ComponentConstants;
 
@@ -185,7 +185,7 @@ public class ComponentContext implements Serializable {
      * jspException is present in the request.
      */
     static public ComponentContext getContext(ServletRequest request) {
-       if (request.getAttribute("javax.servlet.jsp.jspException") != null) {
+       if (request.getAttribute("jakarta.servlet.jsp.jspException") != null) {
            return null;
         }        return (ComponentContext) request.getAttribute(
             ComponentConstants.COMPONENT_CONTEXT);

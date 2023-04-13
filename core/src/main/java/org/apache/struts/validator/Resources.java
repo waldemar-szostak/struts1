@@ -37,8 +37,8 @@ import org.apache.struts.util.MessageResources;
 import org.apache.struts.util.ModuleUtils;
 import org.apache.struts.util.RequestUtils;
 
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.http.HttpServletRequest;
 
 import java.util.Locale;
 
@@ -67,13 +67,13 @@ public class Resources {
      * Resources key the <code>ServletContext</code> is stored under.
      */
     private static String SERVLET_CONTEXT_PARAM =
-        "javax.servlet.ServletContext";
+        "jakarta.servlet.ServletContext";
 
     /**
      * Resources key the <code>HttpServletRequest</code> is stored under.
      */
     private static String HTTP_SERVLET_REQUEST_PARAM =
-        "javax.servlet.http.HttpServletRequest";
+        "jakarta.servlet.http.HttpServletRequest";
 
     /**
      * Resources key the <code>ActionMessages</code> is stored under.

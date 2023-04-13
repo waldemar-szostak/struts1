@@ -23,7 +23,7 @@ package org.apache.strutsel.taglib.logic;
 import org.apache.struts.taglib.logic.MessagesPresentTag;
 import org.apache.strutsel.taglib.utils.EvalHelper;
 
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * Evalute to <code>true</code> if an <code>ActionMessages</code> class or a

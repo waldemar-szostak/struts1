@@ -21,7 +21,7 @@
 
 package org.apache.struts.util;
 
-import javax.servlet.ServletException;
+import jakarta.servlet.ServletException;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;

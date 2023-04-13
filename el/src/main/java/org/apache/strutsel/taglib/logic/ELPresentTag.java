@@ -23,7 +23,7 @@ package org.apache.strutsel.taglib.logic;
 import org.apache.struts.taglib.logic.PresentTag;
 import org.apache.strutsel.taglib.utils.EvalHelper;
 
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * Evaluates the nested body content of this tag if the specified value is

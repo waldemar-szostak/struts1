@@ -23,7 +23,7 @@ package org.apache.struts.validator;
 import org.apache.commons.beanutils.DynaBean;
 import org.apache.struts.action.ActionMapping;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 import java.io.Serializable;
 

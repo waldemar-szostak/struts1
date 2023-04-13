@@ -28,9 +28,9 @@ import org.apache.struts.action.PlugIn;
 import org.apache.struts.config.ModuleConfig;
 import org.xml.sax.SAXException;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.UnavailableException;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.UnavailableException;
 
 import java.io.IOException;
 

@@ -31,7 +31,7 @@ import org.apache.struts.config.ModuleConfig;
 import org.apache.struts.util.RequestUtils;
 import org.xml.sax.SAXException;
 
-import javax.servlet.ServletException;
+import jakarta.servlet.ServletException;
 
 import java.io.File;
 import java.io.IOException;

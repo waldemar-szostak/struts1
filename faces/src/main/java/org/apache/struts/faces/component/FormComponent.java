@@ -26,7 +26,7 @@ import java.util.Map;
 import javax.faces.component.UIForm;
 import javax.faces.context.FacesContext;
 import javax.faces.el.ValueBinding;
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.http.HttpSession;
 import org.apache.commons.beanutils.DynaBean;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
