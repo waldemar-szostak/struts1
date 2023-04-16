@@ -20,7 +20,7 @@
  */
 package org.apache.strutsel.taglib.utils;
 
-import org.apache.taglibs.standard.lang.support.ExpressionEvaluatorManager;
+import jakarta.el.ExpressionFactory;
 
 import jakarta.servlet.jsp.JspException;
 import jakarta.servlet.jsp.PageContext;
@@ -43,14 +43,12 @@ public final class EvalHelper {
      * is null, or the resulting value is null, it will return null.
      */
     public static Object eval(String attrName, String attrValue, Tag tagObject,
-        PageContext pageContext)
-        throws JspException {
+                              PageContext pageContext)
+            throws JspException {
         Object result = null;
 
         if (attrValue != null) {
-            result =
-                ExpressionEvaluatorManager.evaluate(attrName, attrValue,
-                    Object.class, tagObject, pageContext);
+            result = ExpressionFactory.newInstance().createValueExpression(pageContext.getELContext(), attrValue, Object.class);
         }
 
         return (result);
@@ -62,14 +60,12 @@ public final class EvalHelper {
      * null, or the resulting value is null, it will return null.
      */
     public static String evalString(String attrName, String attrValue,
-        Tag tagObject, PageContext pageContext)
-        throws JspException {
+                                    Tag tagObject, PageContext pageContext)
+            throws JspException {
         Object result = null;
 
         if (attrValue != null) {
-            result =
-                ExpressionEvaluatorManager.evaluate(attrName, attrValue,
-                    String.class, tagObject, pageContext);
+            result = ExpressionFactory.newInstance().createValueExpression(pageContext.getELContext(), attrValue, String.class);
         }
 
         return ((String) result);
@@ -81,14 +77,12 @@ public final class EvalHelper {
      * null, or the resulting value is null, it will return null.
      */
     public static Integer evalInteger(String attrName, String attrValue,
-        Tag tagObject, PageContext pageContext)
-        throws JspException {
+                                      Tag tagObject, PageContext pageContext)
+            throws JspException {
         Object result = null;
 
         if (attrValue != null) {
-            result =
-                ExpressionEvaluatorManager.evaluate(attrName, attrValue,
-                    Integer.class, tagObject, pageContext);
+            result = ExpressionFactory.newInstance().createValueExpression(pageContext.getELContext(), attrValue, Integer.class);
         }
 
         return ((Integer) result);
@@ -100,14 +94,12 @@ public final class EvalHelper {
      * null, or the resulting value is null, it will return null.
      */
     public static Boolean evalBoolean(String attrName, String attrValue,
-        Tag tagObject, PageContext pageContext)
-        throws JspException {
+                                      Tag tagObject, PageContext pageContext)
+            throws JspException {
         Object result = null;
 
         if (attrValue != null) {
-            result =
-                ExpressionEvaluatorManager.evaluate(attrName, attrValue,
-                    Boolean.class, tagObject, pageContext);
+            result = ExpressionFactory.newInstance().createValueExpression(pageContext.getELContext(), attrValue, Boolean.class);
         }
 
         return ((Boolean) result);

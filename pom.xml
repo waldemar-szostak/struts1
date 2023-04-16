@@ -132,6 +132,7 @@
 
     <modules>
         <module>core</module>
+        <module>el</module>
         <module>extras</module>
         <module>mailreader-dao</module>
         <module>scripting</module>
