@@ -42,16 +42,14 @@ public final class EvalHelper {
      * Object value of the evaluated expression.  If the original expression
      * is null, or the resulting value is null, it will return null.
      */
-    public static Object eval(String attrName, String attrValue, Tag tagObject,
-                              PageContext pageContext)
-            throws JspException {
+    public static Object eval(String attrName, String attrValue, Tag tagObject, PageContext pageContext) {
         Object result = null;
 
         if (attrValue != null) {
-            result = ExpressionFactory.newInstance().createValueExpression(pageContext.getELContext(), attrValue, Object.class);
+            result = ExpressionFactory.newInstance().createValueExpression(pageContext.getELContext(), attrValue, Object.class).getValue(pageContext.getELContext());;
         }
 
-        return (result);
+        return result;
     }
 
     /**
@@ -59,16 +57,15 @@ public final class EvalHelper {
      * resulting value is a String object.  If the original expression is
      * null, or the resulting value is null, it will return null.
      */
-    public static String evalString(String attrName, String attrValue,
-                                    Tag tagObject, PageContext pageContext)
+    public static String evalString(String attrName, String attrValue, Tag tagObject, PageContext pageContext)
             throws JspException {
-        Object result = null;
+        String result = null;
 
         if (attrValue != null) {
-            result = ExpressionFactory.newInstance().createValueExpression(pageContext.getELContext(), attrValue, String.class);
+            result = ExpressionFactory.newInstance().createValueExpression(pageContext.getELContext(), attrValue, String.class).getValue(pageContext.getELContext());
         }
 
-        return ((String) result);
+        return result;
     }
 
     /**
@@ -76,16 +73,14 @@ public final class EvalHelper {
      * resulting value is an Integer object.  If the original expression is
      * null, or the resulting value is null, it will return null.
      */
-    public static Integer evalInteger(String attrName, String attrValue,
-                                      Tag tagObject, PageContext pageContext)
-            throws JspException {
-        Object result = null;
+    public static Integer evalInteger(String attrName, String attrValue, Tag tagObject, PageContext pageContext) {
+        Integer result = null;
 
         if (attrValue != null) {
-            result = ExpressionFactory.newInstance().createValueExpression(pageContext.getELContext(), attrValue, Integer.class);
+            result = ExpressionFactory.newInstance().createValueExpression(pageContext.getELContext(), attrValue, Integer.class).getValue(pageContext.getELContext());;
         }
 
-        return ((Integer) result);
+        return result;
     }
 
     /**
@@ -93,15 +88,14 @@ public final class EvalHelper {
      * resulting value is an Boolean object.  If the original expression is
      * null, or the resulting value is null, it will return null.
      */
-    public static Boolean evalBoolean(String attrName, String attrValue,
-                                      Tag tagObject, PageContext pageContext)
+    public static Boolean evalBoolean(String attrName, String attrValue, Tag tagObject, PageContext pageContext)
             throws JspException {
-        Object result = null;
+        Boolean result = null;
 
         if (attrValue != null) {
-            result = ExpressionFactory.newInstance().createValueExpression(pageContext.getELContext(), attrValue, Boolean.class);
+            result = ExpressionFactory.newInstance().createValueExpression(pageContext.getELContext(), attrValue, Boolean.class).getValue(pageContext.getELContext());;
         }
 
-        return ((Boolean) result);
+        return result;
     }
 }
